@@ -17,5 +17,4 @@ public class MenuItemTest {
     public void model_construction_getItemType() {
         assertEquals(MenuItem.ItemType.PANINO, item.getItemType());
     }
-
 }

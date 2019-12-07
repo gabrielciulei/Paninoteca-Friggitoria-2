@@ -54,6 +54,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="sun.cpu.endian" value="little"/>
   </properties>
-  <testcase classname="it.unipd.tos.business.RestaurantBillTest" name="orderPrice_50Discount_hasDiscount" time="0.002"/>
-  <testcase classname="it.unipd.tos.business.RestaurantBillTest" name="orderPrice_50Discount_noDiscount" time="0"/>
+  <testcase classname="it.unipd.tos.business.RestaurantBillTest" name="orderPrice_50Discount_hasDiscount" time="0.001"/>
+  <testcase classname="it.unipd.tos.business.RestaurantBillTest" name="orderPrice_50Discount_noDiscount" time="0.001"/>
 </testsuite>

@@ -15,12 +15,17 @@ public class RestaurantBill implements TakeAwayBill {
     @Override
     public double getOrderPrice(List<MenuItem> itemsOrdered) throws RestaurantBillException {
         double total = 0;
+        if (this.isOrderValid(itemsOrdered) == false) { throw new RestaurantBillException("Non si possono ordinare più di 30 prodotti."); }
         for(MenuItem item : itemsOrdered) {
             total += item.getPrice();
         }
 
         total -= totalDiscounts(itemsOrdered);
         return total;
+    }
+
+    private boolean isOrderValid(List<MenuItem> itemsOrdered) {
+        return itemsOrdered.size() <= 30;
     }
 
     private double totalDiscounts(List<MenuItem> itemsOrdered) {
