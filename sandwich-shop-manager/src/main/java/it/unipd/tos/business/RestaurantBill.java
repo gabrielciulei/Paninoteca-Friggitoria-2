@@ -13,6 +13,10 @@ import it.unipd.tos.business.exception.RestaurantBillException;
 public class RestaurantBill implements TakeAwayBill {
     @Override
     public double getOrderPrice(List<MenuItem> itemsOrdered) throws RestaurantBillException {
-        return 0;
+        double total = 0;
+        for(MenuItem item : itemsOrdered) {
+            total += item.getPrice();
+        }
+        return total;
     }
 }
