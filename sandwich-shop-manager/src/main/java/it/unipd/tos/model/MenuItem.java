@@ -4,6 +4,7 @@
 
 package it.unipd.tos.model;
 
+
 public class MenuItem {
     public enum ItemType {
         PANINO, FRITTO, BEVANDA
