@@ -33,7 +33,7 @@ public class RestaurantBillTest {
         add(new MenuItem(ItemType.BEVANDA, "bev 2", 2.0));
         add(new MenuItem(ItemType.PANINO, "panino 7", 3.0));
     }};
-    List<MenuItem> orderNo50Discount, order50Discount, random;
+    List<MenuItem> orderNo50Discount, order50Discount, random, over30;
     RestaurantBill bill;
 
     @Before
@@ -62,6 +62,12 @@ public class RestaurantBillTest {
             add(menu.get(9));
             add(menu.get(10));
         }};
+
+        over30 = new ArrayList() {{
+            for (int i=0; i < 35; i++) {
+                add(menu.get(i%menu.size()));
+            }
+        }};
     }
 
     @Test
@@ -81,6 +87,17 @@ public class RestaurantBillTest {
         }
         expected -= 1.5;
         assertEquals(expected, bill.getOrderPrice(order50Discount), 0.00);
+    }
+
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
+
+    @Test
+    public void testOrderPrice_itemsMoreThan30_ExceptionThrown() throws RestaurantBillException {
+        // troppi prodotti
+        thrown.expect(RestaurantBillException.class);
+        thrown.expectMessage("Non si possono ordinare più di 30 prodotti.");
+        assertEquals(35, bill.getOrderPrice(over30), 0.00);
     }
 
 }
