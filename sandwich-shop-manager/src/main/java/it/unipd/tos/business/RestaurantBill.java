@@ -31,7 +31,7 @@ public class RestaurantBill implements TakeAwayBill {
     }
 
     private double discount50OnType(List<MenuItem> itemsOrdered, MenuItem.ItemType type, int count) {
-        double cheapest = 0;
+        double cheapest = 99999999;
         int typesCount = 0;
         for(MenuItem item : itemsOrdered) {
             if (item.getItemType() == type) {
