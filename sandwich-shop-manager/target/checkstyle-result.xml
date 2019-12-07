@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="6.11.2">
+<file name="/Users/gabrielciulei/Projects/Paninoteca-Friggitoria-2/sandwich-shop-manager/src/main/java/it/unipd/tos/business/ResturantBill.java">
+</file>
+<file name="/Users/gabrielciulei/Projects/Paninoteca-Friggitoria-2/sandwich-shop-manager/src/main/java/it/unipd/tos/model/MenuItem.java">
+<error line="2" severity="warning" message="Line does not match expected header line of &apos;// [Gabriel] [Ciulei] [1169766] &apos;." source="com.puppycrawl.tools.checkstyle.checks.header.HeaderCheck"/>
+</file>
 <file name="/Users/gabrielciulei/Projects/Paninoteca-Friggitoria-2/sandwich-shop-manager/src/main/java/it/unipd/tos/App.java">
 <error line="1" severity="warning" message="Line does not match expected header line of &apos;////////////////////////////////////////////////////////////////////&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.HeaderCheck"/>
 </file>
