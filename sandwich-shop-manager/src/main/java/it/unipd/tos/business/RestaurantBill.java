@@ -21,7 +21,6 @@ public class RestaurantBill implements TakeAwayBill {
         }
 
         total -= totalDiscounts(itemsOrdered);
-
         if (total < 10) total += 0.5;
         return total;
     }
@@ -33,7 +32,22 @@ public class RestaurantBill implements TakeAwayBill {
     private double totalDiscounts(List<MenuItem> itemsOrdered) {
         double discounts = 0;
         discounts += discount50OnType(itemsOrdered, MenuItem.ItemType.PANINO, 5);
+        discounts += discount10(itemsOrdered, 50);
         return discounts;
+    }
+
+    private double discount10(List<MenuItem> itemsOrdered, double overPrice) {
+        double total = 0;
+        for(MenuItem item : itemsOrdered) { 
+            if (item.getItemType() == MenuItem.ItemType.PANINO || item.getItemType() == MenuItem.ItemType.FRITTO) {
+                total += item.getPrice();
+           }
+        }
+
+        if (total >= 50) {
+            return total*0.1;
+        }
+        return 0;
     }
 
     private double discount50OnType(List<MenuItem> itemsOrdered, MenuItem.ItemType type, int count) {
