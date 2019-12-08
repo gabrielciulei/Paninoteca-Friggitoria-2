@@ -21,6 +21,8 @@ public class RestaurantBill implements TakeAwayBill {
         }
 
         total -= totalDiscounts(itemsOrdered);
+
+        if (total < 10) total += 0.5;
         return total;
     }
 
@@ -31,7 +33,6 @@ public class RestaurantBill implements TakeAwayBill {
     private double totalDiscounts(List<MenuItem> itemsOrdered) {
         double discounts = 0;
         discounts += discount50OnType(itemsOrdered, MenuItem.ItemType.PANINO, 5);
-
         return discounts;
     }
 
