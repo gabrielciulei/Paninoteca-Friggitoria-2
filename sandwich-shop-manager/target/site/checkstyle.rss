@@ -27,7 +27,7 @@ under the License.
     <item>
       <title>File: 5,
              Errors: 0,
-             Warnings: 5,
+             Warnings: 6,
              Infos: 0
       </title>
             <link>http://maven.apache.org/checkstyle.html</link>
@@ -108,7 +108,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  2
+                  3
                 </td>
                 <td>
                   0

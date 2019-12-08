@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="it.unipd.tos.model.MenuItemTest" time="0.001" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="it.unipd.tos.model.MenuItemTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="13.0.1+9"/>
@@ -54,6 +54,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="sun.cpu.endian" value="little"/>
   </properties>
-  <testcase classname="it.unipd.tos.model.MenuItemTest" name="model_construction_getPrice" time="0.001"/>
+  <testcase classname="it.unipd.tos.model.MenuItemTest" name="model_construction_getPrice" time="0"/>
   <testcase classname="it.unipd.tos.model.MenuItemTest" name="model_construction_getItemType" time="0"/>
 </testsuite>
