@@ -33,7 +33,7 @@ public class RestaurantBillTest {
         add(new MenuItem(ItemType.BEVANDA, "bev 2", 2.0));
         add(new MenuItem(ItemType.PANINO, "panino 7", 3.0));
     }};
-    List<MenuItem> orderNo50Discount, order50Discount, random, over30;
+    List<MenuItem> orderNo50Discount, order50Discount, random, over30, under10, over10;
     RestaurantBill bill;
 
     @Before
@@ -63,11 +63,41 @@ public class RestaurantBillTest {
             add(menu.get(10));
         }};
 
+        under10 = new ArrayList() {{
+            add(menu.get(0));
+            add(menu.get(1));
+        }};
+
+        over10 = new ArrayList() {{
+            add(menu.get(0));
+            add(menu.get(1));
+            add(menu.get(2));
+            add(menu.get(3));
+        }};
+
         over30 = new ArrayList() {{
             for (int i=0; i < 35; i++) {
                 add(menu.get(i%menu.size()));
             }
         }};
+    }
+
+    @Test
+    public void orderPrice_under10_applyCommision() throws RestaurantBillException {
+        double expected = 0;
+        for(MenuItem item : under10) {
+            expected += item.getPrice();
+        }
+        assertEquals(expected+0.5, bill.getOrderPrice(under10), 0.00);
+    }
+
+    @Test
+    public void orderPrice_under10_noCommision() throws RestaurantBillException {
+        double expected = 0;
+        for(MenuItem item : over10) {
+            expected += item.getPrice();
+        }
+        assertEquals(expected, bill.getOrderPrice(over10), 0.00);
     }
 
     @Test

@@ -5,6 +5,7 @@
 <file name="/Users/gabrielciulei/Projects/Paninoteca-Friggitoria-2/sandwich-shop-manager/src/main/java/it/unipd/tos/business/RestaurantBill.java">
 <error line="2" severity="warning" message="Line does not match expected header line of &apos;// [Gabriel] [Ciulei] [1169766] &apos;." source="com.puppycrawl.tools.checkstyle.checks.header.HeaderCheck"/>
 <error line="18" severity="warning" message="Line is longer than 120 characters (found 139)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="25" severity="warning" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
 </file>
 <file name="/Users/gabrielciulei/Projects/Paninoteca-Friggitoria-2/sandwich-shop-manager/src/main/java/it/unipd/tos/business/exception/RestaurantBillException.java">
 <error line="2" severity="warning" message="Line does not match expected header line of &apos;// [Gabriel] [Ciulei] [1169766] &apos;." source="com.puppycrawl.tools.checkstyle.checks.header.HeaderCheck"/>
